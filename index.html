@@ -15,6 +15,10 @@
       <a href="index.html">
         <img src="img/logo-amv.png" alt="Logo AMV" class="logo" />
       </a>
+      <!-- Botão de menu para mobile -->
+      <button class="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
       <nav>
         <ul>
           <li><a href="index.html">Início</a></li>
@@ -27,6 +31,8 @@
       </nav>
     </div>
   </header>
+  
+  
 
   <main>
     <!-- Inscrições em destaque -->
@@ -97,7 +103,7 @@
         <p>© 2025 Associação dos Motoristas de Vacaria. Todos os direitos reservados.</p>
       </div>
     </div>
-    
+
       <!-- Redes Sociais -->
   <div class="footer-section">
     <h3>Siga-nos nas Redes</h3>
@@ -108,5 +114,11 @@
   </div>
 
   </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('open');
+    });
+  </script>
+  
 </body>
 </html>

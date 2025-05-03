@@ -1,4 +1,3 @@
-<!-- galeria.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,34 +8,82 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <a href="index.html">
-        <img src="img/logo-amv.png" alt="Logo AMV" class="logo" />
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="galeria.html">Galeria</a></li>
-          <li><a href="estrutura.html">Estrutura</a></li>
-          <li><a href="associe-se.html">Associe-se</a></li>
-          <li><a href="programacao.html">Programação</a></li>
-          <li><a href="soberanas.html">Soberanas</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="container">
+          <a href="index.html">
+            <img src="img/logo-amv.png" alt="Logo AMV" class="logo" />
+          </a>
+          <!-- Botão de menu para mobile -->
+          <button class="menu-toggle" aria-label="Abrir menu">
+            ☰
+          </button>
+          <nav>
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="estrutura.html">Estrutura</a></li>
+              <li><a href="associe-se.html">Associe-se</a></li>
+              <li><a href="programacao.html">Programação</a></li>
+              <li><a href="soberanas.html">Soberanas</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
 
   <main>
     <section class="bloco">
-      <h2>Galeria de Fotos</h2>
-      <p>Aqui você encontra os álbuns dos nossos eventos mais recentes. </p>
-      <!-- Exemplo de link para álbum Google Fotos -->
-      <ul class="beneficios-list">
-        <li>📸 <a href="https://photos.app.goo.gl/exemplo1" target="_blank">Festa Junina 2024</a></li>
-        <li>📸 <a href="https://photos.app.goo.gl/exemplo2" target="_blank">Churrasco dos Caminhoneiros</a></li>
-        <!-- adicione mais itens conforme necessário -->
-      </ul>
+      <h2>Galeria de Eventos</h2>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <h3>Festa 2025</h3>
+          <a href="https://drive.google.com/drive/folders/1gCLjEszfzVxI0mb2aLr3WEaxRrVzr6AP?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2024</h3>
+          <a href="https://drive.google.com/drive/folders/1pjrX8F9gopUSHB6oamqPdRIjfbyKXK1V?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2023</h3>
+          <a href="https://drive.google.com/drive/folders/1Y5cpflbIcN90FA6Ubu8oZ3RZ2mntUtTG?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2022</h3>
+          <a href="https://drive.google.com/drive/folders/1lDXBjrHVs6IYIgLZ_PwvqQNwtqKCJjui?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2020</h3>
+          <a href="https://drive.google.com/drive/folders/1dZKhFOtto5RDgfrkJhf_FDhkCpzva-5J?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2018</h3>
+          <a href="https://drive.google.com/drive/folders/1PQQNjL7FnFS51npj3AVZfq-m9bzder95?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2017</h3>
+          <a href="https://drive.google.com/drive/folders/1kH-P-YjC7594OvQvswn-h5JwaPJmHcyk?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+        <div class="gallery-card">
+          <h3>Festa 2012</h3>
+          <a href="https://drive.google.com/drive/folders/1dNbRdV91YnRY6DwBwDv9s4j75SZV-WQV?usp=sharing" target="_blank">
+            Ver Fotos
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -62,5 +109,11 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('open');
+    });
+  </script>
+  
 </body>
 </html>
