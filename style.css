@@ -165,3 +165,40 @@ footer a:hover {
     margin-bottom: 20px;
   }
 }
+/* --- Ajustes adicionais --- */
+
+/* Logo maior */
+.logo {
+  height: 80px;
+}
+
+/* Benefícios como “chips” */
+.beneficios .benef-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+.beneficios .benef-list span {
+  background: #00A94F;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.95em;
+}
+
+/* Destaque da seção de inscrições */
+.bloco.destaque {
+  background: #fff5f5;
+  border: 2px solid #E30016;
+  border-radius: 8px;
+  text-align: center;
+}
+.bloco.destaque h2 {
+  font-size: 1.9em;
+}
+.bloco.destaque .btn-inscreva {
+  font-size: 1.15em;
+  padding: 18px 30px;
+}
