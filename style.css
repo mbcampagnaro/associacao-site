@@ -215,3 +215,24 @@ footer a:hover {
   font-size: 1em;
   line-height: 1.5;
 }
+/* Lista de redes sociais no rodapé */
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 0;
+}
+.social-list li {
+  font-size: 0.95em;
+}
+.social-list a {
+  color: #00A94F;
+  font-weight: bold;
+  transition: text-decoration 0.2s;
+}
+.social-list a:hover {
+  text-decoration: underline;
+}
+
