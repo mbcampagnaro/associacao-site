@@ -112,4 +112,67 @@ body {
   footer a:hover {
     text-decoration: underline;
   }
-  
+  /* Espaço entre blocos */
+.bloco {
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Títulos das seções */
+.bloco h2 {
+  margin-bottom: 15px;
+  font-size: 1.75em;
+  color: #00A94F;
+}
+
+/* Parágrafos */
+.bloco p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Listas de benefícios */
+.beneficios ul {
+  list-style: disc inside;
+  max-width: 600px;
+  margin: 0 auto 15px;
+  padding-left: 20px;
+}
+
+/* Destaque do concurso */
+.bloco.destaque {
+  background: #fff5f5;
+  border: 2px solid #E30016;
+  border-radius: 8px;
+}
+
+.bloco.destaque h2 {
+  color: #E30016;
+}
+
+.bloco.destaque p {
+  margin: 10px auto;
+}
+
+/* Botão de inscrição */
+.btn-inscreva {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 24px;
+  font-size: 1em;
+}
+
+/* Ajuste no rodapé para responsividade */
+footer .container {
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
