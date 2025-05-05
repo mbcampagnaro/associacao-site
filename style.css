@@ -289,3 +289,20 @@ footer a:hover {
     margin-bottom: 20px;
   }
 }
+/* Seção de convite para redes sociais */
+.bloco.redes {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  margin-top: 20px;
+}
+.bloco.redes h2 {
+  color: #00A94F;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+.bloco.redes p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  font-size: 1em;
+  line-height: 1.5;
+}
