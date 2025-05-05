@@ -373,3 +373,19 @@ footer a:hover {
 .whatsapp-float:hover {
   opacity: 0.9;
 }
+/* Ajustes específicos para o footer no mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px;    /* menos padding */
+  }
+  footer .container {
+    gap: 10px;             /* reduz gap entre seções */
+  }
+  .footer-section {
+    margin-bottom: 10px;   /* menos margin entre as seções */
+  }
+  .footer-copy {
+    margin-top: 20px;      /* aproxima do restante */
+    font-size: 0.8em;      /* ligeiramente menor */
+  }
+}
