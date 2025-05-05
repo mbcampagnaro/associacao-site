@@ -29,7 +29,7 @@ header {
   flex-wrap: wrap;
 }
 .logo {
-  height: 60px;
+  height: 100px; /* Logo maior */
 }
 
 /* Navigation */
@@ -74,15 +74,22 @@ main {
   max-width: 800px;
   margin: 0 auto 15px;
 }
-.beneficios ul {
-  list-style: disc inside;
+
+/* Benefícios como lista */
+.beneficios-list {
+  list-style: none;
   max-width: 600px;
-  margin: 0 auto 15px;
-  padding-left: 20px;
+  margin: 15px auto 30px;
+  padding: 0 20px;
   text-align: left;
 }
+.beneficios-list li {
+  margin-bottom: 10px;
+  font-size: 1em;
+  line-height: 1.5;
+}
 
-/* Highlighted contest */
+/* Destaque do concurso */
 .bloco.destaque {
   background: #fff5f5;
   border: 2px solid #E30016;
@@ -91,14 +98,14 @@ main {
 }
 .bloco.destaque h2 {
   color: #E30016;
+  font-size: 1.9em;
 }
-
-/* “Quero me inscrever” button */
+/* Botão de inscrição */
 .btn-inscreva {
   display: inline-block;
   margin-top: 15px;
-  padding: 16px 28px;
-  font-size: 1.1em;
+  padding: 18px 30px;
+  font-size: 1.15em;
   background-color: #E30016;
   color: #fff;
   border: none;
@@ -114,6 +121,31 @@ main {
 .btn-inscreva:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(227,0,22,0.3);
+}
+
+/* Botões de redes sociais após benefícios */
+.social-buttons {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+.btn-social {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: opacity 0.3s, transform 0.2s;
+}
+.btn-social:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.btn-social.instagram {
+  background: #E4405F;
+}
+.btn-social.facebook {
+  background: #1877F2;
 }
 
 /* Footer */
@@ -154,152 +186,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  footer .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-section {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-}
-/* --- Ajustes adicionais --- */
-
-/* Logo maior */
-.logo {
-  height: 100px;
-}
-
-/* Benefícios como “chips” */
-.beneficios .benef-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 15px;
-}
-.beneficios .benef-list span {
-  background: #00A94F;
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 20px;
-  font-size: 0.95em;
-}
-
-/* Destaque da seção de inscrições */
-.bloco.destaque {
-  background: #fff5f5;
-  border: 2px solid #E30016;
-  border-radius: 8px;
-  text-align: center;
-}
-.bloco.destaque h2 {
-  font-size: 1.9em;
-}
-.bloco.destaque .btn-inscreva {
-  font-size: 1.15em;
-  padding: 18px 30px;
-}
-/* Lista de benefícios */
-.beneficios-list {
-  list-style: none;
-  max-width: 600px;
-  margin: 15px auto 30px;
-  padding: 0 20px;
-  text-align: left;
-}
-.beneficios-list li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  line-height: 1.5;
-}
-/* Lista de redes sociais no rodapé */
-.social-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
-  padding: 0;
-}
-.social-list li {
-  font-size: 0.95em;
-}
-.social-list a {
-  color: #00A94F;
-  font-weight: bold;
-  transition: text-decoration 0.2s;
-}
-.social-list a:hover {
-  text-decoration: underline;
-}
-
-/* --- Responsividade aprimorada --- */
-@media (max-width: 768px) {
-  /* Header empilha logo e menu */
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  /* Menu vertical */
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-  }
-  nav a {
-    display: block;
-    padding: 10px 0;
-  }
-
-  /* Logo centralizado */
-  .logo {
-    margin-bottom: 10px;
-  }
-
-  /* Main maior espaçamento e texto maior */
-  main {
-    padding: 20px 10px;
-  }
-  .bloco h2 {
-    font-size: 1.5em;
-  }
-  .bloco p,
-  .bloco ul,
-  .beneficios-list li {
-    font-size: 0.95em;
-  }
-
-  /* Lista de benefícios ocupa 100% e sem padding excessivo */
-  .beneficios-list,
-  .social-list {
-    padding: 0;
-    margin: 0 auto 20px;
-  }
-
-  /* Botões com largura total opcional */
-  .btn-inscreva {
-    width: 100%;
-    max-width: 300px;
-    margin: 15px auto 0;
-  }
-
-  /* Footer empilha seções */
-  footer .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-section {
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-}
 /* Galeria em grid */
 .gallery-grid {
   display: grid;
@@ -329,7 +215,8 @@ footer a:hover {
   transform: translateY(-4px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-/* Menu hamburguer no mobile */
+
+/* Menu hambúrguer no mobile */
 .menu-toggle {
   display: none;
   background: none;
@@ -338,15 +225,13 @@ footer a:hover {
   color: #fff;
   cursor: pointer;
 }
-
-/* Esconde nav padrão em mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
   nav {
     position: absolute;
-    top: 70px; /* altura do header */
+    top: 120px; /* header mais alto com logo maior */
     left: 0;
     width: 100%;
     background: #00A94F;
@@ -355,7 +240,7 @@ footer a:hover {
     transition: max-height 0.3s ease;
   }
   nav.open {
-    max-height: 300px; /* ajustável conforme número de itens */
+    max-height: 400px;
   }
   nav ul {
     flex-direction: column;
@@ -368,30 +253,39 @@ footer a:hover {
     display: block;
     padding: 12px;
   }
-}
-/* Botões de redes sociais abaixo dos benefícios */
-.social-buttons {
-  text-align: center;
-  margin: 20px 0;
-}
-.btn-social {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 12px 24px;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: opacity 0.3s, transform 0.2s;
-}
-.btn-social:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
 
-/* Cores das redes */
-.btn-social.instagram {
-  background: #E4405F;
-}
-.btn-social.facebook {
-  background: #1877F2;
+  /* Header empilha logo e menu */
+  header .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Main e blocos ajustados */
+  main {
+    padding: 20px 10px;
+  }
+  .bloco h2 {
+    font-size: 1.5em;
+  }
+  .bloco p,
+  .bloco ul li {
+    font-size: 0.95em;
+  }
+  .btn-inscreva,
+  .btn-social {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+  }
+
+  /* Footer empilha seções */
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
