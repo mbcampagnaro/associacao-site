@@ -361,4 +361,23 @@ footer a:hover {
   }
 }
 
+/* Ajustes para tabela de Soberanas em mobile */
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px -10px;
+    padding: 0 10px;
+  }
+  .soberanas-table {
+    min-width: 600px; /* força o scroll */
+    width: auto;
+  }
+  .soberanas-table th,
+  .soberanas-table td {
+    padding: 6px 8px;
+    font-size: 0.9em;
+  }
+}
+
 
