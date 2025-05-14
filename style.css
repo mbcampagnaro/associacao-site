@@ -6,7 +6,7 @@
 }
 body {
   font-family: sans-serif;
-  background-color: #fff;
+  background: #fff;
   color: #000;
 }
 a {
@@ -29,7 +29,7 @@ header {
   flex-wrap: wrap;
 }
 .logo {
-  height: 100px; /* Logo maior */
+  height: 100px;
 }
 
 /* Navigation */
@@ -44,16 +44,24 @@ nav a {
   padding: 8px 16px;
   border-radius: 6px;
   background: rgba(255,255,255,0.2);
-  box-shadow: inset 0 0 0 0 rgba(255,255,255,0.5);
-  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  transition: background 0.3s, transform 0.2s;
 }
 nav a:hover {
   background: rgba(255,255,255,0.4);
   transform: translateY(-2px);
-  box-shadow: inset 0 0 4px rgba(255,255,255,0.6);
 }
 
-/* Main content */
+/* Menu hambúrguer (mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Main blocks */
 main {
   padding: 40px 20px;
 }
@@ -75,7 +83,7 @@ main {
   margin: 0 auto 15px;
 }
 
-/* Benefícios como lista */
+/* Benefícios */
 .beneficios-list {
   list-style: none;
   max-width: 600px;
@@ -89,7 +97,46 @@ main {
   line-height: 1.5;
 }
 
-/* Destaque do concurso */
+/* Seção de convite para redes sociais */
+.bloco.redes {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  margin: 0 auto 40px;
+  max-width: 800px;
+}
+.bloco.redes h2 {
+  color: #00A94F;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+.bloco.redes p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Botões de redes sociais */
+.social-buttons {
+  text-align: center;
+  margin-bottom: 0;
+}
+.btn-social {
+  display: inline-block;
+  margin: 0 10px 10px;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: transform 0.2s, opacity 0.3s;
+}
+.btn-social.instagram { background: #E4405F; }
+.btn-social.facebook  { background: #1877F2; }
+.btn-social:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Concurso em destaque */
 .bloco.destaque {
   background: #fff5f5;
   border: 2px solid #E30016;
@@ -106,46 +153,52 @@ main {
   margin-top: 15px;
   padding: 18px 30px;
   font-size: 1.15em;
-  background-color: #E30016;
+  background: #E30016;
   color: #fff;
   border: none;
   border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(227,0,22,0.4);
-  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 .btn-inscreva:hover {
-  background-color: #c40013;
+  background: #c40013;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(227,0,22,0.5);
 }
-.btn-inscreva:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(227,0,22,0.3);
-}
 
-/* Botões de redes sociais após benefícios */
-.social-buttons {
+/* Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 15px;
+  margin: 20px auto 40px;
+  max-width: 840px;
+  padding: 0 10px;
+}
+.gallery-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 200px;
+  padding: 20px;
   text-align: center;
-  margin: 20px 0 40px;
+  transition: transform 0.2s, box-shadow 0.3s;
 }
-.btn-social {
+.gallery-card h3 {
+  margin-bottom: 12px;
+  color: #00A94F;
+  font-size: 1.1em;
+}
+.gallery-card a {
   display: inline-block;
-  margin: 0 10px;
-  padding: 12px 24px;
-  color: #fff;
+  margin-top: 8px;
+  color: #E30016;
   font-weight: bold;
-  border-radius: 6px;
-  transition: opacity 0.3s, transform 0.2s;
 }
-.btn-social:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-.btn-social.instagram {
-  background: #E4405F;
-}
-.btn-social.facebook {
-  background: #1877F2;
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* Footer */
@@ -179,177 +232,8 @@ footer .container {
   font-size: 0.85em;
   color: #666;
 }
-footer a {
-  color: #00A94F;
-}
 footer a:hover {
   text-decoration: underline;
-}
-
-/* Galeria em grid fixo e centralizado */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
-  justify-content: center;
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 840px; /* controla a largura máxima do grid */
-}
-.gallery-card {
-  width: 200px;
-  padding: 16px;
-}
-
-
-/* Menu hambúrguer no mobile */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8em;
-  color: #fff;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  nav {
-    position: absolute;
-    top: 120px; /* header mais alto com logo maior */
-    left: 0;
-    width: 100%;
-    background: #00A94F;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  nav.open {
-    max-height: 400px;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0;
-  }
-  nav li + li {
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-  nav a {
-    display: block;
-    padding: 12px;
-  }
-
-  /* Header empilha logo e menu */
-  header .container {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* Main e blocos ajustados */
-  main {
-    padding: 20px 10px;
-  }
-  .bloco h2 {
-    font-size: 1.5em;
-  }
-  .bloco p,
-  .bloco ul li {
-    font-size: 0.95em;
-  }
-  .btn-inscreva,
-  .btn-social {
-    width: 100%;
-    max-width: 300px;
-    margin: 15px auto;
-  }
-
-  /* Footer empilha seções */
-  footer .container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-section {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-}
-/* Seção de convite para redes sociais */
-.bloco.redes {
-  background: #f9f9f9;
-  padding: 30px 20px;
-  margin-top: 20px;
-}
-.bloco.redes h2 {
-  color: #00A94F;
-  font-size: 1.6em;
-  margin-bottom: 10px;
-}
-.bloco.redes p {
-  max-width: 700px;
-  margin: 0 auto 20px;
-  font-size: 1em;
-  line-height: 1.5;
-}
-/* Galeria em grid compacto */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-items: center;
-  gap: 20px;
-  margin: 20px auto;
-  max-width: 840px;
-  padding: 0 10px;
-}
-
-/* Cards da galeria */
-.gallery-card {
-  background: #fff;                  /* fundo branco */
-  border: 1px solid #e0e0e0;         /* borda leve */
-  border-radius: 8px;                /* cantos arredondados */
-  width: 200px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.3s;
-}
-.gallery-card h3 {
-  margin-bottom: 12px;
-  color: #00A94F;
-  font-size: 1.1em;
-}
-.gallery-card a {
-  display: inline-block;
-  margin-top: 8px;
-  color: #E30016;
-  font-weight: bold;
-}
-.gallery-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-/* Header mobile ajustado */
-@media (max-width: 768px) {
-  header .container {
-    justify-content: center;    /* logo centralizado */
-    padding: 5px 0;             /* menos espaçamento */
-    position: relative;
-  }
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    left: 20px;                 /* menu na esquerda */
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 1.8em;
-    color: #fff;
-    z-index: 1001;
-  }
-  nav {
-    top: 100px; /* ajuste para caber logo maior */
-  }
 }
 
 /* Botão WhatsApp fixo */
@@ -373,32 +257,16 @@ footer a:hover {
 .whatsapp-float:hover {
   opacity: 0.9;
 }
-/* Ajustes específicos para o footer no mobile */
-@media (max-width: 768px) {
-  footer {
-    padding: 20px 10px;    /* menos padding */
-  }
-  footer .container {
-    gap: 10px;             /* reduz gap entre seções */
-  }
-  .footer-section {
-    margin-bottom: 10px;   /* menos margin entre as seções */
-  }
-  .footer-copy {
-    margin-top: 20px;      /* aproxima do restante */
-    font-size: 0.8em;      /* ligeiramente menor */
-  }
-}
 
 /* Tabela de Soberanas */
 .table-responsive {
   overflow-x: auto;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 .soberanas-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   max-width: 800px;
 }
 .soberanas-table th,
@@ -410,7 +278,6 @@ footer a:hover {
 .soberanas-table th {
   background: #00A94F;
   color: #fff;
-  font-size: 1em;
 }
 .soberanas-table tbody tr:nth-child(even) {
   background: #f9f9f9;
@@ -418,4 +285,80 @@ footer a:hover {
 .soberanas-table tbody tr:hover {
   background: #fff5f5;
 }
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  /* Header */
+  header .container {
+    justify-content: center;
+    position: relative;
+    padding: 5px 0;
+  }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+  nav {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background: #00A94F;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  nav.open {
+    max-height: 400px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  nav a {
+    display: block;
+    padding: 12px;
+  }
+
+  /* Main */
+  main {
+    padding: 20px 10px;
+  }
+  .bloco h2 {
+    font-size: 1.5em;
+  }
+  .bloco p,
+  .beneficios-list li {
+    font-size: 0.95em;
+  }
+  .btn-inscreva,
+  .btn-social {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+  }
+
+  /* Footer */
+  footer {
+    padding: 20px 10px;
+  }
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-section {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .footer-copy {
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+}
+
 
